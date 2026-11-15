@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/aether-rush/">
+<!-- BASE:END -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -8,12 +12,307 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#070614" />
   <meta name="format-detection" content="telephone=no" />
-  <title>Aether Rush</title>
+  
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%070614'/%3E%3Ccircle cx='32' cy='32' r='14' fill='%2300f0ff'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23fff'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  
+
+<!-- SEO Meta Tags -->
+<title>Aether Rush</title>
+<meta property="og:title" content="Aether Rush" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Aether Rush" />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mwi6lhxs-vsrm7";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=9329');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='zapTxq';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='zapTxq';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="game-root">
@@ -59,6 +358,783 @@
     </div>
   </div>
 
-  <script type="module" src="game.js"></script>
+  <script type="module">
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js";
+
+(function () {
+  "use strict";
+
+  var STORAGE_KEY = "aether-rush-best";
+  var LANES = [-2.15, 0, 2.15];
+  var SEGMENT_LEN = 26;
+  var SEGMENT_COUNT = 10;
+  var START_SPEED = 28;
+  var MAX_SPEED = 64;
+
+  var canvas = document.getElementById("c");
+  var hud = document.getElementById("hud");
+  var scoreEl = document.getElementById("score");
+  var bestEl = document.getElementById("best");
+  var overlay = document.getElementById("overlay");
+  var titleScreen = document.getElementById("title-screen");
+  var gameoverScreen = document.getElementById("gameover-screen");
+  var finalScoreEl = document.getElementById("final-score");
+  var newBestEl = document.getElementById("new-best");
+  var controls = document.getElementById("controls");
+
+  var best = Number(localStorage.getItem(STORAGE_KEY) || 0);
+  bestEl.textContent = String(Math.floor(best));
+
+  var state = {
+    mode: "title",
+    lane: 1,
+    x: 0,
+    y: 0.62,
+    z: 0,
+    vy: 0,
+    onGround: true,
+    speed: 12,
+    score: 0,
+    distance: 0,
+    shake: 0,
+    time: 0,
+    combo: 0
+  };
+
+  var keys = Object.create(null);
+  var touchStart = null;
+  var audioCtx = null;
+
+  var scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x0a0718);
+  scene.fog = new THREE.FogExp2(0x0a0718, 0.032);
+
+  var camera = new THREE.PerspectiveCamera(62, 1, 0.1, 280);
+  var renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    antialias: true,
+    powerPreference: "high-performance",
+    alpha: false
+  });
+  renderer.setClearColor(0x0a0718, 1);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.15;
+
+  function resize() {
+    var vv = window.visualViewport;
+    var w = Math.max(1, Math.floor(vv ? vv.width : window.innerWidth));
+    var h = Math.max(1, Math.floor(vv ? vv.height : window.innerHeight));
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    renderer.setPixelRatio(dpr);
+    renderer.setSize(w, h, true);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  resize();
+  window.addEventListener("resize", resize, { passive: true });
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", resize, { passive: true });
+  }
+
+  scene.add(new THREE.HemisphereLight(0x6ecbff, 0x2a1038, 0.85));
+  var sun = new THREE.DirectionalLight(0xffc6a8, 0.9);
+  sun.position.set(-8, 14, 6);
+  scene.add(sun);
+  var rim = new THREE.DirectionalLight(0x66f0ff, 0.45);
+  rim.position.set(6, 4, -8);
+  scene.add(rim);
+
+  var skyGeo = new THREE.SphereGeometry(200, 24, 16);
+  var skyMat = new THREE.ShaderMaterial({
+    side: THREE.BackSide,
+    depthWrite: false,
+    uniforms: {},
+    vertexShader: "varying vec3 vP; void main(){ vP = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }",
+    fragmentShader: "varying vec3 vP; void main(){ float h = normalize(vP).y; vec3 top = vec3(0.05,0.04,0.16); vec3 mid = vec3(0.22,0.07,0.28); vec3 bot = vec3(0.02,0.02,0.07); vec3 col = mix(bot, mid, smoothstep(-0.2, 0.15, h)); col = mix(col, top, smoothstep(0.15, 0.7, h)); gl_FragColor = vec4(col, 1.0); }"
+  });
+  scene.add(new THREE.Mesh(skyGeo, skyMat));
+
+  var planet = new THREE.Mesh(
+    new THREE.SphereGeometry(18, 32, 24),
+    new THREE.MeshStandardMaterial({
+      color: 0x241033,
+      emissive: 0x3a1450,
+      emissiveIntensity: 0.55,
+      roughness: 0.85,
+      metalness: 0.1
+    })
+  );
+  planet.position.set(-42, 28, -120);
+  scene.add(planet);
+  var planetGlow = new THREE.Mesh(
+    new THREE.SphereGeometry(22, 24, 16),
+    new THREE.MeshBasicMaterial({ color: 0xff4ea8, transparent: true, opacity: 0.12, depthWrite: false })
+  );
+  planetGlow.position.copy(planet.position);
+  scene.add(planetGlow);
+
+  var starCount = 500;
+  var starPos = new Float32Array(starCount * 3);
+  for (var si = 0; si < starCount; si++) {
+    starPos[si * 3] = (Math.random() - 0.5) * 220;
+    starPos[si * 3 + 1] = 8 + Math.random() * 90;
+    starPos[si * 3 + 2] = -20 - Math.random() * 200;
+  }
+  var starGeo = new THREE.BufferGeometry();
+  starGeo.setAttribute("position", new THREE.BufferAttribute(starPos, 3));
+  scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.45, sizeAttenuation: true })));
+
+  function makeRoadTexture() {
+    var c = document.createElement("canvas");
+    c.width = 256;
+    c.height = 256;
+    var g = c.getContext("2d");
+    g.fillStyle = "#141228";
+    g.fillRect(0, 0, 256, 256);
+    g.fillStyle = "#1c1840";
+    for (var y = 0; y < 256; y += 16) {
+      g.fillRect(0, y, 256, 1);
+    }
+    g.fillStyle = "#00f0ff";
+    g.fillRect(126, 0, 4, 90);
+    g.fillRect(126, 140, 4, 90);
+    g.fillStyle = "#ff3d9a";
+    g.fillRect(0, 0, 8, 256);
+    g.fillRect(248, 0, 8, 256);
+    var tex = new THREE.CanvasTexture(c);
+    tex.wrapS = THREE.RepeatWrapping;
+    tex.wrapT = THREE.RepeatWrapping;
+    tex.anisotropy = 8;
+    tex.colorSpace = THREE.SRGBColorSpace;
+    return tex;
+  }
+
+  var roadTex = makeRoadTexture();
+  roadTex.repeat.set(1, SEGMENT_COUNT * 2);
+  var roadMat = new THREE.MeshStandardMaterial({
+    map: roadTex,
+    roughness: 0.42,
+    metalness: 0.35,
+    emissive: 0x081018,
+    emissiveIntensity: 0.6
+  });
+  var road = new THREE.Mesh(new THREE.PlaneGeometry(8.2, SEGMENT_LEN * SEGMENT_COUNT), roadMat);
+  road.rotation.x = -Math.PI / 2;
+  scene.add(road);
+
+  var railGeo = new THREE.BoxGeometry(0.16, 0.28, SEGMENT_LEN * SEGMENT_COUNT);
+  var railMatL = new THREE.MeshStandardMaterial({ color: 0x0a0a14, emissive: 0x00f0ff, emissiveIntensity: 1.4, roughness: 0.3, metalness: 0.6 });
+  var railMatR = new THREE.MeshStandardMaterial({ color: 0x0a0a14, emissive: 0xff3d9a, emissiveIntensity: 1.4, roughness: 0.3, metalness: 0.6 });
+  var railL = new THREE.Mesh(railGeo, railMatL);
+  var railR = new THREE.Mesh(railGeo, railMatR);
+  railL.position.set(-4.15, 0.16, 0);
+  railR.position.set(4.15, 0.16, 0);
+  scene.add(railL, railR);
+
+  var pylonGeo = new THREE.BoxGeometry(0.22, 5.5, 0.22);
+  var pylonMat = new THREE.MeshStandardMaterial({ color: 0x12081c, emissive: 0x6a2cff, emissiveIntensity: 0.7, roughness: 0.4, metalness: 0.5 });
+  var pylonCount = 40;
+  var pylons = new THREE.InstancedMesh(pylonGeo, pylonMat, pylonCount);
+  var dummy = new THREE.Object3D();
+  for (var pi = 0; pi < pylonCount; pi++) {
+    var side = pi % 2 === 0 ? -1 : 1;
+    dummy.position.set(side * 5.3, 2.6, -Math.floor(pi / 2) * 14);
+    dummy.updateMatrix();
+    pylons.setMatrixAt(pi, dummy.matrix);
+  }
+  pylons.instanceMatrix.needsUpdate = true;
+  scene.add(pylons);
+  var pylonAnchorZ = 0;
+
+  var crystalGeo = new THREE.ConeGeometry(1.6, 7, 5);
+  var crystalMat = new THREE.MeshStandardMaterial({ color: 0x1a0a2e, emissive: 0x2a1050, emissiveIntensity: 0.4, roughness: 0.7, flatShading: true });
+  var crystalCount = 24;
+  var crystals = new THREE.InstancedMesh(crystalGeo, crystalMat, crystalCount);
+  for (var ci = 0; ci < crystalCount; ci++) {
+    var cside = ci % 2 === 0 ? -1 : 1;
+    dummy.position.set(cside * (10 + (ci % 5) * 2.4), 2.2, - (ci * 11));
+    dummy.rotation.set(0, ci, 0.15 * cside);
+    dummy.updateMatrix();
+    crystals.setMatrixAt(ci, dummy.matrix);
+  }
+  crystals.instanceMatrix.needsUpdate = true;
+  scene.add(crystals);
+
+  var ship = new THREE.Group();
+  var hullMat = new THREE.MeshStandardMaterial({ color: 0xdff9ff, emissive: 0x00c8e0, emissiveIntensity: 0.55, metalness: 0.7, roughness: 0.25 });
+  var accentMat = new THREE.MeshStandardMaterial({ color: 0x091018, emissive: 0xff3d9a, emissiveIntensity: 0.8, metalness: 0.6, roughness: 0.3 });
+  var hull = new THREE.Mesh(new THREE.BoxGeometry(0.52, 0.22, 1.15), hullMat);
+  hull.position.y = 0;
+  var nose = new THREE.Mesh(new THREE.ConeGeometry(0.26, 0.7, 8), hullMat);
+  nose.rotation.x = -Math.PI / 2;
+  nose.position.z = -0.78;
+  var cockpit = new THREE.Mesh(
+    new THREE.SphereGeometry(0.2, 12, 10),
+    new THREE.MeshStandardMaterial({ color: 0x9cf7ff, emissive: 0x4adfff, emissiveIntensity: 0.9, transparent: true, opacity: 0.95, roughness: 0.15, metalness: 0.2 })
+  );
+  cockpit.position.set(0, 0.16, -0.12);
+  var wingL = new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.06, 0.42), accentMat);
+  wingL.position.set(-0.46, -0.02, 0.12);
+  wingL.rotation.z = 0.22;
+  var wingR = wingL.clone();
+  wingR.position.x = 0.46;
+  wingR.rotation.z = -0.22;
+  var engine = new THREE.Mesh(
+    new THREE.CylinderGeometry(0.12, 0.16, 0.22, 10),
+    new THREE.MeshBasicMaterial({ color: 0x9fffff })
+  );
+  engine.rotation.x = Math.PI / 2;
+  engine.position.z = 0.62;
+  var engineGlow = new THREE.Mesh(
+    new THREE.SphereGeometry(0.22, 12, 12),
+    new THREE.MeshBasicMaterial({ color: 0x00f0ff, transparent: true, opacity: 0.45, depthWrite: false })
+  );
+  engineGlow.position.z = 0.72;
+  ship.add(hull, nose, cockpit, wingL, wingR, engine, engineGlow);
+  scene.add(ship);
+
+  var shadow = new THREE.Mesh(
+    new THREE.CircleGeometry(0.55, 16),
+    new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.35, depthWrite: false })
+  );
+  shadow.rotation.x = -Math.PI / 2;
+  shadow.position.y = 0.03;
+  scene.add(shadow);
+
+  var trailGeo = new THREE.BufferGeometry();
+  var trailCount = 80;
+  var trailPos = new Float32Array(trailCount * 3);
+  trailGeo.setAttribute("position", new THREE.BufferAttribute(trailPos, 3));
+  var trail = new THREE.Points(trailGeo, new THREE.PointsMaterial({
+    color: 0x66ffff,
+    size: 0.12,
+    transparent: true,
+    opacity: 0.85,
+    depthWrite: false
+  }));
+  scene.add(trail);
+  var trailHead = 0;
+
+  function sharedOrbGlow() {
+    return new THREE.MeshBasicMaterial({ color: 0xffe08a, transparent: true, opacity: 0.28, depthWrite: false });
+  }
+
+  var orbGeo = new THREE.SphereGeometry(0.32, 16, 14);
+  var orbGlowGeo = new THREE.SphereGeometry(0.55, 12, 10);
+  var orbTypes = {
+    cyan: {
+      mat: new THREE.MeshStandardMaterial({ color: 0x00f0ff, emissive: 0x00f0ff, emissiveIntensity: 1.2, roughness: 0.25, metalness: 0.2 }),
+      glow: new THREE.MeshBasicMaterial({ color: 0x00f0ff, transparent: true, opacity: 0.28, depthWrite: false }),
+      value: 10
+    },
+    gold: {
+      mat: new THREE.MeshStandardMaterial({ color: 0xffd166, emissive: 0xffb000, emissiveIntensity: 1.3, roughness: 0.25, metalness: 0.25 }),
+      glow: new THREE.MeshBasicMaterial({ color: 0xffd166, transparent: true, opacity: 0.3, depthWrite: false }),
+      value: 25
+    },
+    magenta: {
+      mat: new THREE.MeshStandardMaterial({ color: 0xff3d9a, emissive: 0xff3d9a, emissiveIntensity: 1.2, roughness: 0.25, metalness: 0.2 }),
+      glow: new THREE.MeshBasicMaterial({ color: 0xff3d9a, transparent: true, opacity: 0.28, depthWrite: false }),
+      value: 15
+    }
+  };
+
+  var orbs = [];
+  var obstacles = [];
+
+  var blockGeo = new THREE.BoxGeometry(1.5, 1.8, 1.2);
+  var lowGeo = new THREE.BoxGeometry(1.7, 0.7, 1.0);
+  var blockMat = new THREE.MeshStandardMaterial({ color: 0x14081c, emissive: 0x3a1030, emissiveIntensity: 0.5, roughness: 0.4, metalness: 0.45 });
+  var edgeMat = new THREE.LineBasicMaterial({ color: 0xff4ea8 });
+  var lowEdgeMat = new THREE.LineBasicMaterial({ color: 0x00f0ff });
+
+  function makeObstacle(low) {
+    var group = new THREE.Group();
+    var mesh = new THREE.Mesh(low ? lowGeo : blockGeo, blockMat);
+    var edges = new THREE.LineSegments(new THREE.EdgesGeometry(low ? lowGeo : blockGeo), low ? lowEdgeMat : edgeMat);
+    group.add(mesh, edges);
+    group.visible = false;
+    group.userData = { active: false, low: !!low, lane: 1 };
+    scene.add(group);
+    return group;
+  }
+
+  function makeOrb() {
+    var group = new THREE.Group();
+    var core = new THREE.Mesh(orbGeo, orbTypes.cyan.mat);
+    var glow = new THREE.Mesh(orbGlowGeo, orbTypes.cyan.glow);
+    group.add(core, glow);
+    group.visible = false;
+    group.userData = { active: false, kind: "cyan", value: 10, lane: 1 };
+    scene.add(group);
+    return group;
+  }
+
+  for (var i = 0; i < 18; i++) obstacles.push(makeObstacle(i % 3 === 0));
+  for (var j = 0; j < 20; j++) orbs.push(makeOrb());
+
+  var spawnZ = -40;
+  var lastPattern = -1;
+
+  function resetPools() {
+    for (var i = 0; i < obstacles.length; i++) {
+      obstacles[i].visible = false;
+      obstacles[i].userData.active = false;
+    }
+    for (var k = 0; k < orbs.length; k++) {
+      orbs[k].visible = false;
+      orbs[k].userData.active = false;
+    }
+    spawnZ = state.z - 40;
+  }
+
+  function getFree(list) {
+    for (var i = 0; i < list.length; i++) {
+      if (!list[i].userData.active) return list[i];
+    }
+    return null;
+  }
+
+  function placeObstacle(lane, z, low) {
+    var obj = null;
+    for (var i = 0; i < obstacles.length; i++) {
+      if (!obstacles[i].userData.active && obstacles[i].userData.low === low) {
+        obj = obstacles[i];
+        break;
+      }
+    }
+    if (!obj) obj = getFree(obstacles);
+    if (!obj) return;
+    obj.userData.active = true;
+    obj.userData.low = low;
+    obj.userData.lane = lane;
+    obj.visible = true;
+    obj.position.set(LANES[lane], low ? 0.4 : 0.95, z);
+  }
+
+  function placeOrb(lane, z, kind) {
+    var obj = getFree(orbs);
+    if (!obj) return;
+    var t = orbTypes[kind] || orbTypes.cyan;
+    obj.children[0].material = t.mat;
+    obj.children[1].material = t.glow;
+    obj.userData.active = true;
+    obj.userData.kind = kind;
+    obj.userData.value = t.value;
+    obj.userData.lane = lane;
+    obj.visible = true;
+    obj.position.set(LANES[lane], 1.05, z);
+  }
+
+  function spawnAhead() {
+    var horizon = state.z - 160;
+    while (spawnZ > horizon) {
+      spawnZ -= 14 + Math.random() * 6;
+      if (state.mode !== "playing") {
+        if (Math.random() < 0.5) placeOrb(Math.floor(Math.random() * 3), spawnZ, "cyan");
+        continue;
+      }
+      var pattern = Math.floor(Math.random() * 6);
+      if (pattern === lastPattern) pattern = (pattern + 1) % 6;
+      lastPattern = pattern;
+      var progress = Math.min(1, state.distance / 1800);
+      if (pattern === 0) {
+        var blocked = Math.floor(Math.random() * 3);
+        placeObstacle(blocked, spawnZ, false);
+        for (var l = 0; l < 3; l++) if (l !== blocked) placeOrb(l, spawnZ, Math.random() < 0.2 ? "gold" : "cyan");
+      } else if (pattern === 1) {
+        placeObstacle(0, spawnZ, false);
+        placeObstacle(2, spawnZ, false);
+        placeOrb(1, spawnZ - 2, "gold");
+      } else if (pattern === 2) {
+        placeObstacle(1, spawnZ, true);
+        placeOrb(1, spawnZ, "magenta");
+        placeOrb(0, spawnZ - 5, "cyan");
+        placeOrb(2, spawnZ - 5, "cyan");
+      } else if (pattern === 3) {
+        var side = Math.random() < 0.5 ? 0 : 2;
+        placeObstacle(side, spawnZ, false);
+        placeObstacle(1, spawnZ, progress > 0.35 && Math.random() < 0.45);
+        placeOrb(side === 0 ? 2 : 0, spawnZ, "cyan");
+      } else if (pattern === 4) {
+        placeOrb(0, spawnZ, "cyan");
+        placeOrb(1, spawnZ - 3, Math.random() < 0.3 ? "gold" : "magenta");
+        placeOrb(2, spawnZ - 6, "cyan");
+        if (progress > 0.2) placeObstacle(Math.floor(Math.random() * 3), spawnZ - 10, Math.random() < 0.5);
+      } else {
+        var keep = Math.floor(Math.random() * 3);
+        for (var n = 0; n < 3; n++) {
+          if (n === keep) placeOrb(n, spawnZ, "gold");
+          else placeObstacle(n, spawnZ, Math.random() < 0.35);
+        }
+      }
+    }
+  }
+
+  function recyclePassed() {
+    var behind = state.z + 12;
+    for (var i = 0; i < obstacles.length; i++) {
+      if (obstacles[i].userData.active && obstacles[i].position.z > behind) {
+        obstacles[i].userData.active = false;
+        obstacles[i].visible = false;
+      }
+    }
+    for (var k = 0; k < orbs.length; k++) {
+      if (orbs[k].userData.active && orbs[k].position.z > behind) {
+        orbs[k].userData.active = false;
+        orbs[k].visible = false;
+      }
+    }
+  }
+
+  function updateWorldTrack() {
+    var mid = state.z - (SEGMENT_LEN * SEGMENT_COUNT) / 2 + 20;
+    road.position.set(0, 0, mid);
+    railL.position.z = mid;
+    railR.position.z = mid;
+    roadTex.offset.y = (state.z * 0.08) % 1;
+
+    if (state.z - pylonAnchorZ < -14) {
+      pylonAnchorZ -= 14;
+      var base = pylonAnchorZ;
+      for (var pi = 0; pi < pylonCount; pi++) {
+        var side = pi % 2 === 0 ? -1 : 1;
+        dummy.position.set(side * 5.3, 2.6, base - Math.floor(pi / 2) * 14);
+        dummy.rotation.set(0, 0, 0);
+        dummy.updateMatrix();
+        pylons.setMatrixAt(pi, dummy.matrix);
+      }
+      pylons.instanceMatrix.needsUpdate = true;
+      for (var ci = 0; ci < crystalCount; ci++) {
+        var cside = ci % 2 === 0 ? -1 : 1;
+        dummy.position.set(cside * (10 + (ci % 5) * 2.4), 2.2, base - ci * 11);
+        dummy.rotation.set(0, ci, 0.15 * cside);
+        dummy.updateMatrix();
+        crystals.setMatrixAt(ci, dummy.matrix);
+      }
+      crystals.instanceMatrix.needsUpdate = true;
+    }
+  }
+
+  function ensureAudio() {
+    if (audioCtx) {
+      if (audioCtx.state === "suspended") audioCtx.resume();
+      return audioCtx;
+    }
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    audioCtx = new AC();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+    return audioCtx;
+  }
+
+  function tone(freq, dur, type, vol, slide) {
+    try {
+      var ctx = ensureAudio();
+      if (!ctx) return;
+      var o = ctx.createOscillator();
+      var g = ctx.createGain();
+      o.type = type || "sine";
+      o.frequency.setValueAtTime(freq, ctx.currentTime);
+      if (slide) o.frequency.exponentialRampToValueAtTime(slide, ctx.currentTime + dur);
+      g.gain.setValueAtTime(vol || 0.07, ctx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + dur);
+      o.connect(g);
+      g.connect(ctx.destination);
+      o.start();
+      o.stop(ctx.currentTime + dur + 0.02);
+    } catch (err) {}
+  }
+
+  function setMode(mode) {
+    state.mode = mode;
+    var playing = mode === "playing";
+    hud.hidden = !playing;
+    controls.hidden = !playing;
+    overlay.hidden = playing;
+    titleScreen.hidden = mode !== "title";
+    gameoverScreen.hidden = mode !== "gameover";
+  }
+
+  function resetRun() {
+    state.lane = 1;
+    state.x = 0;
+    state.y = 0.62;
+    state.z = 0;
+    state.vy = 0;
+    state.onGround = true;
+    state.speed = START_SPEED;
+    state.score = 0;
+    state.distance = 0;
+    state.shake = 0;
+    state.combo = 0;
+    pylonAnchorZ = 0;
+    lastPattern = -1;
+    resetPools();
+    scoreEl.textContent = "0";
+    spawnAhead();
+    updateWorldTrack();
+  }
+
+  function startGame() {
+    ensureAudio();
+    tone(220, 0.28, "sawtooth", 0.05, 660);
+    resetRun();
+    setMode("playing");
+  }
+
+  function gameOver() {
+    if (state.mode !== "playing") return;
+    state.shake = 0.7;
+    tone(180, 0.4, "square", 0.08, 60);
+    var score = Math.floor(state.score);
+    var isBest = score > best;
+    if (isBest) {
+      best = score;
+      localStorage.setItem(STORAGE_KEY, String(best));
+      bestEl.textContent = String(best);
+    }
+    finalScoreEl.textContent = String(score);
+    newBestEl.hidden = !isBest;
+    setMode("gameover");
+  }
+
+  function changeLane(dir) {
+    if (state.mode !== "playing") return;
+    var next = state.lane + dir;
+    if (next < 0 || next > 2) return;
+    state.lane = next;
+    tone(420, 0.06, "triangle", 0.03);
+  }
+
+  function jump() {
+    if (state.mode !== "playing" || !state.onGround) return;
+    state.onGround = false;
+    state.vy = 8.6;
+    tone(520, 0.12, "sine", 0.04, 280);
+  }
+
+  function collect(orb) {
+    orb.userData.active = false;
+    orb.visible = false;
+    state.combo += 1;
+    var bonus = orb.userData.value + Math.min(20, state.combo);
+    state.score += bonus;
+    scoreEl.textContent = String(Math.floor(state.score));
+    var f = orb.userData.kind === "gold" ? 880 : orb.userData.kind === "magenta" ? 720 : 640;
+    tone(f, 0.1, "sine", 0.06, f * 1.4);
+  }
+
+  function collide() {
+    if (state.mode !== "playing") return;
+    var px = state.x;
+    var py = state.y;
+    var pz = state.z;
+    for (var i = 0; i < orbs.length; i++) {
+      var o = orbs[i];
+      if (!o.userData.active) continue;
+      var dz = o.position.z - pz;
+      if (dz > 1.2 || dz < -1.2) continue;
+      var dx = o.position.x - px;
+      var dy = o.position.y - py;
+      if (dx * dx + dy * dy < 0.85) collect(o);
+    }
+    for (var k = 0; k < obstacles.length; k++) {
+      var b = obstacles[k];
+      if (!b.userData.active) continue;
+      var bz = b.position.z - pz;
+      if (bz > 1.05 || bz < -0.9) continue;
+      if (Math.abs(b.position.x - px) > 1.05) continue;
+      if (b.userData.low && py > 1.25) continue;
+      gameOver();
+      return;
+    }
+  }
+
+  function onPointerDown(e) {
+    if (e.cancelable) e.preventDefault();
+    var t = e.changedTouches ? e.changedTouches[0] : e;
+    touchStart = { x: t.clientX, y: t.clientY, t: performance.now(), id: t.identifier };
+  }
+
+  function onPointerUp(e) {
+    if (e.cancelable) e.preventDefault();
+    if (!touchStart) return;
+    var t = null;
+    if (e.changedTouches) {
+      for (var i = 0; i < e.changedTouches.length; i++) {
+        if (e.changedTouches[i].identifier === touchStart.id || touchStart.id == null) {
+          t = e.changedTouches[i];
+          break;
+        }
+      }
+      if (!t) t = e.changedTouches[0];
+    } else {
+      t = e;
+    }
+    var dx = t.clientX - touchStart.x;
+    var dy = t.clientY - touchStart.y;
+    touchStart = null;
+    if (state.mode !== "playing") return;
+    if (e.target && e.target.closest && e.target.closest("#controls")) return;
+    var ax = Math.abs(dx);
+    var ay = Math.abs(dy);
+    if (ax < 24 && ay < 24) return;
+    if (ay > ax && dy < -28) jump();
+    else if (ax >= ay && ax > 28) changeLane(dx < 0 ? -1 : 1);
+  }
+
+  function bindHold(btn, fn) {
+    var held = false;
+    function start(e) {
+      if (e.cancelable) e.preventDefault();
+      e.stopPropagation();
+      if (held) return;
+      held = true;
+      fn();
+    }
+    function end(e) {
+      if (e.cancelable) e.preventDefault();
+      e.stopPropagation();
+      held = false;
+    }
+    btn.addEventListener("pointerdown", start);
+    btn.addEventListener("pointerup", end);
+    btn.addEventListener("pointercancel", end);
+    btn.addEventListener("pointerleave", end);
+  }
+
+  bindHold(document.getElementById("btn-left"), function () { changeLane(-1); });
+  bindHold(document.getElementById("btn-right"), function () { changeLane(1); });
+  bindHold(document.getElementById("btn-jump"), jump);
+
+  document.getElementById("btn-play").addEventListener("click", function (e) {
+    e.preventDefault();
+    startGame();
+  });
+  document.getElementById("btn-retry").addEventListener("click", function (e) {
+    e.preventDefault();
+    startGame();
+  });
+
+  window.addEventListener("keydown", function (e) {
+    if (e.repeat) {
+      keys[e.code] = true;
+      return;
+    }
+    keys[e.code] = true;
+    if (e.code === "ArrowLeft" || e.code === "KeyA") changeLane(-1);
+    if (e.code === "ArrowRight" || e.code === "KeyD") changeLane(1);
+    if (e.code === "Space" || e.code === "ArrowUp" || e.code === "KeyW") {
+      e.preventDefault();
+      if (state.mode === "title" || state.mode === "gameover") startGame();
+      else jump();
+    }
+    if ((e.code === "Enter" || e.code === "KeyP") && state.mode !== "playing") startGame();
+  });
+  window.addEventListener("keyup", function (e) { keys[e.code] = false; });
+
+  var root = document.getElementById("game-root");
+  root.addEventListener("touchstart", onPointerDown, { passive: false });
+  root.addEventListener("touchend", onPointerUp, { passive: false });
+  root.addEventListener("touchcancel", function () { touchStart = null; }, { passive: true });
+
+  ["touchmove", "gesturestart", "gesturechange", "gestureend"].forEach(function (type) {
+    document.addEventListener(type, function (e) {
+      if (e.cancelable) e.preventDefault();
+    }, { passive: false });
+  });
+  document.addEventListener("dblclick", function (e) { e.preventDefault(); }, { passive: false });
+
+  var clock = new THREE.Clock();
+
+  function update(dt) {
+    state.time += dt;
+    var playing = state.mode === "playing";
+    var cruise = state.mode === "title" || state.mode === "gameover";
+    var targetSpeed = playing ? Math.min(MAX_SPEED, START_SPEED + state.distance * 0.018) : 12;
+    state.speed += (targetSpeed - state.speed) * Math.min(1, dt * 2.5);
+    state.z -= state.speed * dt;
+    if (playing) {
+      state.distance += state.speed * dt;
+      state.score += state.speed * dt * 0.35;
+      scoreEl.textContent = String(Math.floor(state.score));
+    }
+
+    var targetX = LANES[state.lane];
+    state.x += (targetX - state.x) * Math.min(1, dt * 12);
+
+    if (playing) {
+      if (!state.onGround) {
+        state.vy -= 22 * dt;
+        state.y += state.vy * dt;
+        if (state.y <= 0.62) {
+          state.y = 0.62;
+          state.vy = 0;
+          state.onGround = true;
+        }
+      }
+    } else {
+      state.y = 0.62 + Math.sin(state.time * 2.2) * 0.06;
+      state.onGround = true;
+      state.vy = 0;
+    }
+
+    ship.position.set(state.x, state.y, state.z);
+    ship.rotation.z = THREE.MathUtils.lerp(ship.rotation.z, (targetX - state.x) * 0.18, Math.min(1, dt * 8));
+    ship.rotation.x = THREE.MathUtils.lerp(ship.rotation.x, state.onGround ? 0 : -0.25, Math.min(1, dt * 6));
+    engineGlow.scale.setScalar(1 + Math.sin(state.time * 18) * 0.12 + state.speed / 200);
+
+    shadow.position.set(state.x, 0.03, state.z);
+    var s = Math.max(0.25, 0.55 - (state.y - 0.62) * 0.18);
+    shadow.scale.set(s, s, 1);
+    shadow.material.opacity = 0.38 * s;
+
+    trailPos[trailHead * 3] = state.x + (Math.random() - 0.5) * 0.08;
+    trailPos[trailHead * 3 + 1] = state.y;
+    trailPos[trailHead * 3 + 2] = state.z + 0.75;
+    trailHead = (trailHead + 1) % trailCount;
+    trailGeo.attributes.position.needsUpdate = true;
+
+    for (var i = 0; i < orbs.length; i++) {
+      if (!orbs[i].userData.active) continue;
+      orbs[i].position.y = 1.05 + Math.sin(state.time * 3 + orbs[i].position.z) * 0.16;
+      orbs[i].rotation.y += dt * 2.4;
+    }
+
+    spawnAhead();
+    recyclePassed();
+    updateWorldTrack();
+    if (playing) collide();
+
+    if (state.shake > 0) state.shake = Math.max(0, state.shake - dt * 2.2);
+    var sx = (Math.random() - 0.5) * state.shake;
+    var sy = (Math.random() - 0.5) * state.shake;
+    camera.position.x = state.x * 0.55 + sx;
+    camera.position.y = 3.15 + sy + (playing ? 0 : 0.35);
+    camera.position.z = state.z + 7.4;
+    camera.lookAt(state.x * 0.7, 0.9, state.z - 8);
+    void cruise;
+  }
+
+  var jsErrors = [];
+  window.addEventListener("error", function (e) {
+    jsErrors.push(String(e.message || e));
+  });
+
+  function loop() {
+    requestAnimationFrame(loop);
+    var dt = Math.min(0.05, clock.getDelta());
+    update(dt);
+    renderer.render(scene, camera);
+  }
+
+  resetRun();
+  setMode("title");
+  loop();
+})();
+
+  </script>
 </body>
 </html>
